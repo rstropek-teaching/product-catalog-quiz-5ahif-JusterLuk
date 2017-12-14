@@ -1,0 +1,53 @@
+﻿@model ProductCatalogMVC.Models.Product
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width" />
+    <title>Product Details</title>
+</head>
+<body style="margin: 5px">
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <div style="margin-left: 20px">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductID)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ProductID)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PricePerUnit)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PricePerUnit)
+            </dd>
+        </dl>
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Back to Start", "Index", new { @class = "btn btn-secondary", role = "button" })
+</div>
+</body>
+</html>

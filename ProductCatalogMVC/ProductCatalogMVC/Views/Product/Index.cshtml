@@ -1,0 +1,73 @@
+﻿@model IEnumerable<ProductCatalogMVC.Models.Product>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width" />
+        <title>Start Page</title>
+    </head>
+    <body style="margin: 5px">
+        <p>
+            <h1>Products</h1>
+            <br />
+            <h4>What are you searching for?</h4>
+            @using (Html.BeginForm("ProductSearch", "Product"))
+            {
+                <input type="text" id="idname" name="name" asp-for="name" class="form-control" />
+                <button type="submit" style="margin-top: 5px">Search</button>
+            }
+            <br />
+            <hr />
+            <h4>Create a new Product</h4>
+            @Html.ActionLink("Create new Product", "Create", new { @class = "btn btn-secondary", role = "button"})
+            <br />
+            <br />
+        </p>
+        <hr />
+        <h4>Your Products</h4>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ProductID)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PricePerUnit)
+                    </th>
+                    <th>
+                        Options
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model) {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProductID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PricePerUnit)$
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </body>
+</html>

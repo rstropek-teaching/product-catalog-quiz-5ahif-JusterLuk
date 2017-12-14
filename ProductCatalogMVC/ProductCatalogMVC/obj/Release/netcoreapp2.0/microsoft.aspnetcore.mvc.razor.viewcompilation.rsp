@@ -1,0 +1,9 @@
+C:\Users\lukas\Source\Repos\product-catalog-quiz-5ahif-JusterLuk\ProductCatalogMVC\ProductCatalogMVC
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=ProductCatalogMVC
+--content-root=C:\Users\lukas\Source\Repos\product-catalog-quiz-5ahif-JusterLuk\ProductCatalogMVC\ProductCatalogMVC
+--file=C:\Users\lukas\Source\Repos\product-catalog-quiz-5ahif-JusterLuk\ProductCatalogMVC\ProductCatalogMVC\Views\Product\Create.cshtml
+--file=C:\Users\lukas\Source\Repos\product-catalog-quiz-5ahif-JusterLuk\ProductCatalogMVC\ProductCatalogMVC\Views\Product\Delete.cshtml
+--file=C:\Users\lukas\Source\Repos\product-catalog-quiz-5ahif-JusterLuk\ProductCatalogMVC\ProductCatalogMVC\Views\Product\Details.cshtml
+--file=C:\Users\lukas\Source\Repos\product-catalog-quiz-5ahif-JusterLuk\ProductCatalogMVC\ProductCatalogMVC\Views\Product\Index.cshtml
+--file=C:\Users\lukas\Source\Repos\product-catalog-quiz-5ahif-JusterLuk\ProductCatalogMVC\ProductCatalogMVC\Views\Product\ProductSearch.cshtml
